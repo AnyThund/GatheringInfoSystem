@@ -70,7 +70,7 @@ class SurveyDetail(View):
                         return redirect(next_)
                     else:
                         return redirect(
-                            "survey-confirmation", uuid=response.interview_uuid
+                            "survey:survey-confirmation", uuid=response.interview_uuid
                         )
         if survey.template is not None and len(survey.template) > 4:
             template_name = survey.template

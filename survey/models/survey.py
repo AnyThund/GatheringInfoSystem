@@ -34,4 +34,4 @@ class Survey(models.Model):
         return min_
 
     def get_absolute_url(self):
-        return reverse("survey-detail", kwargs={"id": self.pk})
+        return reverse("survey:survey-detail", kwargs={"id": self.pk})

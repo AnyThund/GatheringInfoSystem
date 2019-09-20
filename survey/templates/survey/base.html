@@ -1,5 +1,6 @@
 {% load static %}
 {% load bootstrap3 %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,27 +8,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{% block title %}{% endblock title %}</title>
-  <link rel="icon" href="{% static 'img/favicon.ico'%}"/>
-  <link href="{% static 'survey/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css"/>
-  <link rel="stylesheet" type="text/css" href="{% static 'survey/css/custom.css' %}" />
+  {% bootstrap_css %}
+  {% bootstrap_javascript %}
+  <link rel="stylesheet" href="{% static 'survey/css/style.css' %}">
 </head>
 <body>
-  <div class="container" id="wrap">
-    {% block wrapper %} {% endblock %}
-    <div class="well" id="container-main">
-      {% block body %}	{% endblock body %}
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'user:index' %}">信息收集</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="{% url 'survey:survey-list' %}">信息表</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+        </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+  <div class="container wrap">
+    {% block wrapper %}{% endblock wrapper %}
+    <div class="well">
+      {% block body %}{% endblock body %}
     </div>
     {% block subbody %}{% endblock subbody %}
   </div>
+
   <div class="footer">
     <div class="container">
       {% block footer %}{% endblock %}
     </div>
   </div>
-  <script type="text/javascript" src="{% static 'survey/js/jquery.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'survey/js/jquery-ui.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'survey/js/bootstrap.min.js' %}"></script>
-  {% block extrajs %}	{% endblock %}
+  {% block extrajs %}{% endblock %}
+
 </body>
 </html>
 

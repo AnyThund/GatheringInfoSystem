@@ -1,16 +1,12 @@
 {% extends 'survey/base.html' %}
 {% load i18n %}
 
-{% block title %}{% trans "Survey submitted" %}{% endblock title %}
+{% block title %}信息已提交{% endblock title %}
 
 {% block body %}
-<h1>{% trans "Survey submitted"%}</h1>
+<h1>信息已提交</h1>
 <p>
-    <div class="alert alert-success">
-       {% trans "Thanks! Your answers have been saved" %}
-    </div>
-    <div class="alert alert-info">
-       {% trans "You can always come back and change them." %}
-    </div>
+    <div class="alert alert-success">谢谢！您的回答已保存</div>
+    <div class="alert alert-info">您可以随时回来修改它们</div>
 </p>
 {% endblock %}

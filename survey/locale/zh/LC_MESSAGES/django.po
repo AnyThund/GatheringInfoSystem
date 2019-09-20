@@ -135,7 +135,7 @@ msgstr "名字"
 #: survey/models/category.py:16 survey/models/question.py:84
 #: survey/models/response.py:32
 msgid "Survey"
-msgstr "问卷"
+msgstr "信息表模板"
 
 #: survey/models/category.py:19
 msgid "Display order"
@@ -227,15 +227,15 @@ msgstr "用户"
 
 #: survey/models/response.py:42
 msgid "Interview unique identifier"
-msgstr "问卷的唯一标识"
+msgstr "信息表的唯一标识"
 
 #: survey/models/response.py:45
 msgid "Set of answers to surveys"
-msgstr "问卷的几组回答"
+msgstr "收集到的信息"
 
 #: survey/models/response.py:46
 msgid "Sets of answers to surveys"
-msgstr "问卷的几组回答"
+msgstr "收集到的信息"
 
 #: survey/models/survey.py:12
 msgid "Users can see it and answer it"
@@ -255,11 +255,11 @@ msgstr "模板"
 
 #: survey/models/survey.py:20
 msgid "survey"
-msgstr "问卷"
+msgstr "信息表"
 
 #: survey/models/survey.py:21
 msgid "surveys"
-msgstr "问卷"
+msgstr "信息表"
 
 #: survey/templates/survey/completed.html:4
 #: survey/templates/survey/completed.html:7

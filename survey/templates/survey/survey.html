@@ -12,7 +12,7 @@
 	<h1> {{survey.name}} </h1>
 	<div class="survey-description"> {{survey.description|safe}} </div>
 	<div>
-		<form action="{% url 'survey-detail' id=survey.id %}" method="post">
+		<form action="{% url 'survey:survey-detail' id=survey.id %}" method="post">
 	    {% csrf_token %}
 			{% for category in categories %}
 				<h3> {{category}} </h3>

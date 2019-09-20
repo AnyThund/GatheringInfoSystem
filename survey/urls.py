@@ -5,6 +5,7 @@ from django.conf.urls import url
 from survey.views import ConfirmView, IndexView, SurveyCompleted, SurveyDetail
 from survey.views.survey_result import serve_result_csv
 
+app_name = 'survey'
 urlpatterns = [
     url(r"^$", IndexView.as_view(), name="survey-list"),
     url(r"^(?P<id>\d+)/", SurveyDetail.as_view(), name="survey-detail"),
